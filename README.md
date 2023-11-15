@@ -1,11 +1,8 @@
-## THE DREAM
-
-
-# 📈 JS DATA VISUALISATION CHALLENGE
+# 🍹 THE DREAM
 
 ## 🔗 LIENS PROJET
 
-- **Projet en ligne :** [https://evalambert.github.io/js-datavisualisation-challenge/](https://evalambert.github.io/js-datavisualisation-challenge/ "lien projet js-datavisualisation-challenge en ligne")
+- **Projet en ligne :** [https://evalambert.github.io/the-dream/](https://evalambert.github.io/the-dream/ "lien projet the-dream en ligne")
 
 ## 📌 FICHE PROJET
 
@@ -13,7 +10,6 @@
 - **Type :** Learning
 - **Durée :** 1 jour
 - **Équipe :** Solo
-
 
 ## 🎯 OBJECTIFS
 
