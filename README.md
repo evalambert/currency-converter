@@ -11,19 +11,32 @@
 - **Durée :** 1 jour
 - **Équipe :** Solo
 
-## 🎯 OBJECTIFS
+## 🎯 OBJECTIF
 
-Vous rêvez de partir en vacances après les cours ? Vous allez quelque part loin, très loin ? Et si nous avions soif d'escalader la montagne de la Table en Afrique du Sud en ce moment, ou de bronzer sur une belle plage hawaïenne et que nous avions désespérément besoin d'un cocktail ? Une chose est sûre : il faudrait calculer combien d'euros coûtera cette boisson bien trop chère 💸
+**🌱 Les incontournables**
+
+Choisissez votre prochaine destination de voyage et vérifiez le taux de change : monnaie locale / Euros.
+
+- Créez une petite page Web sur laquelle vous pourrez saisir le tarif local, elle vous indiquera le prix en euros.
+- Vous devrez obtenir des tarifs mis à jour à partir d'API externes.
+- Utilisez un formulaire qui se soumet à PHP, pas de JS autorisé / pas de PreventDefault.
+
+**🌼 C'est bien d'avoir**
+
+- Permettre à l'utilisateur de choisir entre différentes devises
+- Fournissez un bouton pour basculer entre les types de valeur (donc Euro -> Dollar devient Dollar -> Euro)
 
 ## 🌐 TECHNO & LANGUAGES UTILISÉS
 
-- HTML
-- CSS
-- PHP
+- Html
+- Css
+- Php
 
 ## ⏰ ÉTAT D'AVANCEMENT
 
-En cours 🍎
+- Responsivité : refaire en mobile-first
+- Styliser et créer le btn "Reverse"
+- Pofiner le style 🍎
 
 ## 👀 MAQUETTE DU PROJET
 
