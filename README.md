@@ -1,8 +1,8 @@
-# 🍹 THE DREAM
+# 🍹 THE DREAM 💸 CURRENCY CONVERTER
 
 ## 🔗 LIEN PROJET
 
-- **Projet en ligne :** [https://evalambert.github.io/the-dream/](https://evalambert.github.io/the-dream/ "lien projet the-dream en ligne")
+- **Projet en ligne :** [http://currency-converter-evalambert.infinityfreeapp.com/](http://currency-converter-evalambert.infinityfreeapp.com/ "lien projet currency-converter en ligne")
 
 ## 📌 FICHE PROJET
 
