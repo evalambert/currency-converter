@@ -1,6 +1,6 @@
 # 🍹 THE DREAM
 
-## 🔗 LIENS PROJET
+## 🔗 LIEN PROJET
 
 - **Projet en ligne :** [https://evalambert.github.io/the-dream/](https://evalambert.github.io/the-dream/ "lien projet the-dream en ligne")
 
@@ -17,9 +17,9 @@ Vous rêvez de partir en vacances après les cours ? Vous allez quelque part loi
 
 ## 🌐 TECHNO & LANGUAGES UTILISÉS
 
-- Css
-- Html
-- Php
+- HTML
+- CSS
+- PHP
 
 ## ⏰ ÉTAT D'AVANCEMENT
 

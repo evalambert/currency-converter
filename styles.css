@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "atl";
+  src: url(font/AT-Light.otf);
+}
+@font-face {
+  font-family: "atb";
+  src: url(font/AT-Bold.otf);
+}
+
+body {
+  font-family: "atl", sans-serif;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  font-family: "atb", sans-serif;
+  text-transform: uppercase;
+  font-size: 5rem;
+}
+h1 span {
+  color: transparent;
+  -webkit-text-stroke: 2px black;
+}
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+input,
+select,
+button {
+  font-size: 30px;
+  font-family: "atl", sans-serif;
+  border-radius: 20px;
+  padding: 25px 20px;
+  border: 1px solid black;
+}
+
+input,
+button.convert {
+  width: 300px;
+  margin-right: 15px;
+}
+select,
+button.revert{
+  width: 160px;
+  text-align: center;
+}
+
+input {
+  background-color: white;
+}
+
+select {
+  background-color: black;
+  color: white;
+}
+
+button.convert {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+button.revert {
+  background-color: white;
+  color: black;
+}
+
+.material-symbols-outlined {
+  color: red;
+}
+
+/* Pour désactiver les flèches intérieures */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Pour Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
