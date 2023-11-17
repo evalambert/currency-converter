@@ -26,15 +26,12 @@
     ?>
     <div class="wrapper">
 
-        <h1>Currency.<span>Converter</span></h1>
+        <h1>Currency.<br><span>Converter</span></h1>
 
         <form method="post" action="">
             <!-- ------- INPUT ------- -->
-            <div class="input">
-                <label for="amount"></label>
-                <input type="number" placeholder="00,00" name="amount" id="amount" value="<?php echo isset($_POST['amount']) ? number_format($_POST['amount'], 2, '.', '') : ''; ?>">
+                <input type="number" placeholder="0" name="amount" id="amount" value="<?php echo isset($_POST['amount']) ? number_format($_POST['amount'], 2, '.', '') : ''; ?>">
 
-                <label for="from_currency"></label>
                 <select name="base_currency" id="from_currency">
                     <?php
                     // Affichage des devises disponibles
@@ -50,11 +47,10 @@
                     ?>
                     <span class="material-symbols-outlined">expand_more</span>
                 </select>
-            </div>
+
 
             <!-- ------- OUTPUT ------- -->
-            <div class="outup">
-                <label for="result"></label>
+
                 <input type="text" placeholder="Convert to" name="result" id="result" value="<?php
                     if (isset($_POST['amount']) && isset($_POST['base_currency']) && isset($_POST['target_currency'])) {
                         $amount = $_POST['amount'];
@@ -68,7 +64,6 @@
                     }
                 ?>" readonly>
 
-                <label for="to_currency"></label>
                 <select name="target_currency" id="to_currency">
                     <span class="material-symbols-outlined">expand_more</span>
                     <?php
@@ -84,16 +79,17 @@
                     }
                     ?>
                 </select>
-            </div>
+
 
             <!-- ------- SUBMIT ------- -->
-            <div class="submit">
+
                 <button class="convert" type="submit">Convert</button>
                 <button class="revert">
-                    <img src="img/reverse.png" width="20px" alt="">
+                    <p>Revert</p>
                 </button>
-            </div>
+
         </form>
+
     </div>
 </body>
 </html>
