@@ -50,13 +50,18 @@ button {
   border: 1px solid black;
 }
 
+input:nth-child(1):focus {
+  border: 1px solid rgb(67, 38, 228);
+}
+
 select,
-button.revert {
+.revert {
   text-align: center;
+  transition: all 0.3s ease;
 }
 
 input,
-button.revert {
+.revert {
   background-color: white;
 }
 
@@ -64,10 +69,26 @@ select,
 button.convert {
   background-color: black;
   color: white;
+  cursor: pointer;
 }
 
-button.convert {
+select:active {
+  transform: scale(0.95);
+}
+select:hover {
+  background-color: rgb(67, 38, 228);
+}
+
+.convert {
   text-align: center;
+  transition: all 0.3s ease;
+}
+
+.convert:hover {
+  background-color: rgb(67, 38, 228);
+}
+.convert:active {
+  transform: scale(0.95);
 }
 
 input::placeholder {
@@ -103,4 +124,18 @@ input[type="number"] {
   h1 span {
     -webkit-text-stroke: 1.5px black;
   }
+}
+
+select {
+  position: relative;
+}
+
+/* Styles pour les icônes FontAwesome */
+.fa-chevron-down {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Ajuste la position de l'icône selon tes besoins */
+  transform: translateY(-50%);
+  color: white;
+  pointer-events: none;
 }

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
@@ -45,7 +46,7 @@
                     }
                 }
                 ?>
-                <span class="material-symbols-outlined">expand_more</span>
+                <i class="fas fa-chevron-down"></i>
             </select>
 
             <!-- ------- OUTPUT ------- -->
@@ -76,15 +77,36 @@
                     }
                 }
                 ?>
+                <i class="fas fa-chevron-down"></i>
             </select>
 
 
             <!-- ------- SUBMIT ------- -->
             <button class="convert" type="submit">Convert</button>
-            <button class="revert">
+            <!-- <button class="revert">
                 <p>Revert</p>
-            </button>
+            </button> -->
         </form>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const amountInput = document.getElementById('amount');
+        const convertBtn = document.querySelector('.convert');
+
+        // Désactiver le bouton "Convert" au chargement de la page si l'input est vide
+        if (amountInput.value === '') {
+            convertBtn.disabled = true;
+        }
+
+        // Vérifier l'input à chaque changement pour activer ou désactiver le bouton
+        amountInput.addEventListener('input', function() {
+            if (amountInput.value !== '') {
+                convertBtn.disabled = false;
+            } else {
+                convertBtn.disabled = true;
+            }
+        });
+    });
+    </script>
 </body>
 </html>
