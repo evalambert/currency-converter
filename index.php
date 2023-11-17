@@ -30,66 +30,61 @@
 
         <form method="post" action="">
             <!-- ------- INPUT ------- -->
-                <input type="number" placeholder="0" name="amount" id="amount" value="<?php echo isset($_POST['amount']) ? number_format($_POST['amount'], 2, '.', '') : ''; ?>">
+            <input type="number" placeholder="0" name="amount" id="amount" value="<?php echo isset($_POST['amount']) ? number_format($_POST['amount'], 2, '.', '') : ''; ?>">
 
-                <select name="base_currency" id="from_currency">
-                    <?php
-                    // Affichage des devises disponibles
-                    if (isset($currencies)) {
-                        foreach ($currencies as $currency) {
-                            echo "<option value=\"{$currency}\"";
-                            if (isset($_POST['base_currency']) && $_POST['base_currency'] === $currency) {
-                                echo " selected";
-                            }
-                            echo ">{$currency}</option>";
+            <select name="base_currency" id="from_currency">
+                <?php
+                // Affichage des devises disponibles
+                if (isset($currencies)) {
+                    foreach ($currencies as $currency) {
+                        echo "<option value=\"{$currency}\"";
+                        if (isset($_POST['base_currency']) && $_POST['base_currency'] === $currency) {
+                            echo " selected";
                         }
+                        echo ">{$currency}</option>";
                     }
-                    ?>
-                    <span class="material-symbols-outlined">expand_more</span>
-                </select>
-
+                }
+                ?>
+                <span class="material-symbols-outlined">expand_more</span>
+            </select>
 
             <!-- ------- OUTPUT ------- -->
+            <input type="text" placeholder="Convert to" name="result" id="result" value="<?php
+                if (isset($_POST['amount']) && isset($_POST['base_currency']) && isset($_POST['target_currency'])) {
+                    $amount = $_POST['amount'];
+                    $baseCurrency = $_POST['base_currency'];
+                    $targetCurrency = $_POST['target_currency'];
+                    $rates = $data['conversion_rates'];
+                    $result = ($amount * $rates[$targetCurrency]) / $rates[$baseCurrency];
+                    echo number_format($result, 2, '.', '');
+                } else {
+                    echo '';
+                }
+            ?>" readonly>
 
-                <input type="text" placeholder="Convert to" name="result" id="result" value="<?php
-                    if (isset($_POST['amount']) && isset($_POST['base_currency']) && isset($_POST['target_currency'])) {
-                        $amount = $_POST['amount'];
-                        $baseCurrency = $_POST['base_currency'];
-                        $targetCurrency = $_POST['target_currency'];
-                        $rates = $data['conversion_rates'];
-                        $result = ($amount * $rates[$targetCurrency]) / $rates[$baseCurrency];
-                        echo number_format($result, 2, '.', '');
-                    } else {
-                        echo '';
-                    }
-                ?>" readonly>
-
-                <select name="target_currency" id="to_currency">
-                    <span class="material-symbols-outlined">expand_more</span>
-                    <?php
-                    // Affichage des devises disponibles
-                    if (isset($currencies)) {
-                        foreach ($currencies as $currency) {
-                            echo "<option value=\"{$currency}\"";
-                            if (isset($_POST['target_currency']) && $_POST['target_currency'] === $currency) {
-                                echo " selected";
-                            }
-                            echo ">{$currency}</option>";
+            <select name="target_currency" id="to_currency">
+                <span class="material-symbols-outlined">expand_more</span>
+                <?php
+                // Affichage des devises disponibles
+                if (isset($currencies)) {
+                    foreach ($currencies as $currency) {
+                        echo "<option value=\"{$currency}\"";
+                        if (isset($_POST['target_currency']) && $_POST['target_currency'] === $currency) {
+                            echo " selected";
                         }
+                        echo ">{$currency}</option>";
                     }
-                    ?>
-                </select>
+                }
+                ?>
+            </select>
 
 
             <!-- ------- SUBMIT ------- -->
-
-                <button class="convert" type="submit">Convert</button>
-                <button class="revert">
-                    <p>Revert</p>
-                </button>
-
+            <button class="convert" type="submit">Convert</button>
+            <button class="revert">
+                <p>Revert</p>
+            </button>
         </form>
-
     </div>
 </body>
 </html>

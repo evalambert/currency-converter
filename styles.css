@@ -96,7 +96,6 @@ input[type="number"] {
   }
 }
 @media (min-width: 801px) {
-  /* tablet, landscape iPad, lo-res laptops ands desktops */
   h1 {
     font-size: 5rem;
     text-align: center;
@@ -104,10 +103,4 @@ input[type="number"] {
   h1 span {
     -webkit-text-stroke: 1.5px black;
   }
-}
-@media (min-width: 1025px) {
-  /* big landscape tablets, laptops, and desktops */
-}
-@media (min-width: 1281px) {
-  /* hi-res laptops and desktops */
 }
